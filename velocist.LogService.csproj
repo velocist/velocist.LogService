@@ -4,6 +4,31 @@
 		<TargetFramework>net9.0</TargetFramework>
 		<Configurations>Debug;Release;Test;Dev</Configurations>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<Authors>velocist</Authors>
+		<Company>velocist</Company>
+		<Description>Biblioteca para la gestión centralizada de logs en aplicaciones .NET</Description>
+		<Title>Biblioteca para la gestión centralizada de logs en aplicaciones .NET</Title>
+		<Copyright>2025</Copyright>
+		<RepositoryUrl>https://github.com/velocist/velocist.LogService</RepositoryUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>ImageCCSoft.png</PackageIcon>
+		<PackageReleaseNotes>Primera release de la versión 1.0</PackageReleaseNotes>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <DebugType>embedded</DebugType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <DebugType>embedded</DebugType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|AnyCPU'">
+	  <DebugType>embedded</DebugType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dev|AnyCPU'">
+	  <DebugType>embedded</DebugType>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -21,6 +46,17 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.6" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.6" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="ImageCCSoft.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Update="README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	</ItemGroup>
 
 </Project>

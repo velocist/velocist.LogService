@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>net9.0</TargetFramework>
-		<Configurations>Debug;Release;Test</Configurations>
+		<Configurations>Debug;Release</Configurations>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<Authors>velocist</Authors>
 		<Company>velocist</Company>
@@ -24,19 +24,23 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="LoggerFactoryApp.cs" />
+	  <Compile Remove="LogServiceConfiguration.cs" />
+	  <Compile Remove="LogServiceContainer.cs" />
 	  <Compile Remove="LogServiceExtensions.cs" />
+	  <Compile Remove="LogServiceSettings.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Autofac" Version="8.3.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.7" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.7" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.7" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.7" />
-		<PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.7" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.7" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.7" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.7" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.8" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="8.0.0" />
 	</ItemGroup>
 

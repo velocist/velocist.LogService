@@ -1,58 +1,57 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
-	<PropertyGroup>
-		<TargetFramework>net9.0</TargetFramework>
-		<Configurations>Debug;Release</Configurations>
-		<GenerateDocumentationFile>True</GenerateDocumentationFile>
-		<Authors>velocist</Authors>
-		<Company>velocist</Company>
-		<Description>Biblioteca para la gestión centralizada de logs en aplicaciones .NET</Description>
-		<Title>Biblioteca para la gestión centralizada de logs en aplicaciones .NET</Title>
-		<Copyright>2025</Copyright>
-		<RepositoryUrl>https://github.com/velocist/velocist.LogService</RepositoryUrl>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<PackageIcon>ImageCCSoft.png</PackageIcon>
-		<PackageReleaseNotes>Primera release de la versión 1.0</PackageReleaseNotes>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-	  <DebugType>embedded</DebugType>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-	  <DebugType>embedded</DebugType>
-	</PropertyGroup>
-
-	<ItemGroup>
-	  <Compile Remove="LoggerFactoryApp.cs" />
-	  <Compile Remove="LogServiceConfiguration.cs" />
-	  <Compile Remove="LogServiceContainer.cs" />
-	  <Compile Remove="LogServiceExtensions.cs" />
-	  <Compile Remove="LogServiceSettings.cs" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Autofac" Version="8.3.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.8" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.8" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.8" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.8" />
-		<PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.8" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.8" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.8" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.8" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="8.0.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <None Update="ImageCCSoft.png">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
-	  <None Update="README.md">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
-	</ItemGroup>
-
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Configurations>Debug;Release</Configurations>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Description>Biblioteca para la gestion centralizada de logs en aplicaciones .NET</Description>
+    <Title>Biblioteca para la gestion centralizada de logs en aplicaciones .NET</Title>
+    <RepositoryUrl>https://github.com/velocist/velocist.LogService</RepositoryUrl>
+    <PackageIcon>ImageCCSoft.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Company>velocist</Company>
+    <Authors>velocist</Authors>
+    <Copyright>2025</Copyright>
+    <PackageOutputPath>F:\velocist.Svr\LocalPackages</PackageOutputPath>
+    <Version>2.0.4</Version>
+    <FileVersion>2.0.4.229</FileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="LoggerFactoryApp.cs" />
+    <Compile Remove="LogServiceConfiguration.cs" />
+    <Compile Remove="LogServiceContainer.cs" />
+    <Compile Remove="LogServiceExtensions.cs" />
+    <Compile Remove="LogServiceSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="8.3.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="ImageCCSoft.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="LICENSE.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

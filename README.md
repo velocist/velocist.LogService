@@ -28,12 +28,12 @@ Biblioteca para la gestión centralizada de logs en aplicaciones .NET, integrand
 ## ✨ Características<a name="caracteristicas"></a>
 - Integración con Log4Net y consola.
 - Configuración centralizada mediante archivos JSON.
-- Inyección de dependencias con Autofac.
-- Métodos de extensión para facilitar la itegración.
+- Inyección de dependencias con Microsoft.Extensions.DependencyInjection.
+- Métodos de extensión para facilitar la integración.
 
 ---
 
-## 🚦 Instalación y Uso<a name="instalacion-y-uso"></a>
+## �� Instalación y Uso<a name="instalacion-y-uso"></a>
 
 1. Agrega la referencia al proyecto o compila la biblioteca.
 2. Asegúrate de tener los archivos de configuración en la ruta `Settings/logSettings.json` y `Settings/log4net.config`.

@@ -13,7 +13,8 @@
 - [Características](#caracteristicas)
 - [Instalación y Uso](#instalacion-y-uso) 
   - [1. Ejemplo de configuración](#1)
-  - [2. Configuración manual en un host genérico](#2)
+  - [2. Configuración en un host genérico](#2)
+  - [3. Uso](#3)
 - [Licencia](#licencia)
 - [Autor](#autor)
 
@@ -31,7 +32,7 @@ Biblioteca para la gestión centralizada de logs en aplicaciones .NET, integrand
 
 ---
 
-## �� Instalación y Uso<a name="instalacion-y-uso"></a>
+## Instalación y Uso<a name="instalacion-y-uso"></a>
 
 1. Agrega la referencia al proyecto o compila la biblioteca.
 2. Asegúrate de tener los archivos de configuración en la ruta `Settings/logSettings.json` y `Settings/log4net.config`.
@@ -50,10 +51,11 @@ Biblioteca para la gestión centralizada de logs en aplicaciones .NET, integrand
 }
 ```
 
-### 2. Configuración manual en un host genérico<a name="2"></a>
+### 2. Configuración en un host genérico<a name="2"></a>
 ```csharp
 using Microsoft.Extensions.DependencyInjection;
 using velocist.LogService;
+using static velocist.LogService.StaticLoggerFactory;
 
 var services = new ServiceCollection();
 services.AddLogging(builder => {
@@ -61,11 +63,27 @@ services.AddLogging(builder => {
     // builder.AddLog4Net("Settings/log4net.config", true);
 });
 var provider = services.BuildServiceProvider();
+
 var logger = provider.GetRequiredService<ILogger<MiClase>>();
 logger.LogInformation("Mensaje desde DI");
+
+```
+
+### 3. Uso <a name="3"></a>
+```csharp
+
+public readonly ILogger _logger;
+
+public MiClase()
+{
+    _logger = GetLogger<MiClase>();
+    _logger.LogInformation("Mensaje desde el constructor");
+}
+
 ```
 
 ---
+
 
 ## 📝 Licencia<a name="licencia"></a>
 
